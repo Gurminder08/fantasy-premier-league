@@ -8,7 +8,8 @@ router.get("/", (req,res)=>{
 });
 
 router.get("/bootstrap-static", (req,res)=>{
-    const response = axios.get('https://fantasy.premierleague.com/api/bootstrap-static');
+    //https://fantasy.premierleague.com/api/bootstrap-static/
+    const response = axios.get('https://fantasy.premierleague.com/api/bootstrap-static/');
     response.then((resp)=>{
         res.json(resp.data);
     });
