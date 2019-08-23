@@ -1,0 +1,69 @@
+body{
+    margin:0;
+    padding:0;
+    width:100%;
+}
+
+h2{
+    text-align: center;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: black;
+    padding: 30px 0;
+}
+
+#player-input{
+    margin: 2%;
+}
+
+.Main{
+    background-color:lightblue; 
+    padding:2.5%;
+}
+
+.rTable {
+    border-radius: 5px;
+    font-weight: normal;
+    border: none;
+    display: flex;
+    flex-direction:column;
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 12px;
+    background-color: transparent;
+  }
+  
+  .rTableRow {
+    padding: 5px;
+    display:flex;
+    justify-content:center;
+  }
+  
+  .rTableRow .rTableHead {
+    color: #ffffff;
+    background: #4FC3A1;
+  }
+  
+  .rTableRow .rTableHead:nth-child(odd){
+    color: #ffffff;
+    background: #324960;
+  }
+  
+  .rTable .rTableRow:nth-child(even) {
+      background: #F8F8F8;
+  }
+  
+  .rTableHead {
+    flex-basis:25%;
+    padding:8px;
+    text-align:center
+  }
+  
+  .rTableCell{
+    flex-basis:25%;
+    padding:8px;
+    text-align:center;
+  }
+  
+  
