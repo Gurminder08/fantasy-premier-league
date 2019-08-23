@@ -1,5 +1,6 @@
+import './App.css';
 import React, { Component } from 'react'
-import { fdatasync } from 'fs';
+import Playerstats from './components/Playerstats'
 
 class App extends Component {
 
@@ -24,7 +25,7 @@ class App extends Component {
         this.setState({
           element_stats: data.element_stats,
           element_types: data.element_types,
-          elements:data.element_types,
+          elements:data.elements,
           events:data.events,
           game_settings:data.game_settings,
           phases:data.phases,
@@ -38,11 +39,14 @@ class App extends Component {
   }
 
   render() {
-  
-    return (
-      <div>
-          <p>This is React!</p>
 
+    const playersPromise = new Promise((resolve)=>{
+      resolve(this.state.elements);
+    });
+
+    return (
+      <div className="Main">
+          <Playerstats players={playersPromise}/>
       </div>
     )
   }
